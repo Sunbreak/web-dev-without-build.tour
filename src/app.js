@@ -1,3 +1,7 @@
 import { message } from './message.js';
 
-console.log(`The message is: ${message}`);
+window.addEventListener('click', async () => {
+  const module = await import('./message.js');
+
+  console.log(`The message is: ${module.message}`);
+});
